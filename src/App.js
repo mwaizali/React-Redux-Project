@@ -22,7 +22,7 @@ class App extends React.Component {
     const {authUser} = this.props
     if(localStorage.length === 0){
        localStorage.setItem("check", "0")
-       localStorage.setItem("check1", 0)
+       localStorage.setItem("check1", 1)
      }
     return (
       <BrowserRouter>

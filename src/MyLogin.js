@@ -17,22 +17,7 @@ function MyLogin(props){
         event.preventDefault()
         await props.dispatch(setAuthUser(state.value))
         console.log("login page");
-        if(localStorage.getItem("check") == "0"){
-            if(localStorage.getItem("check1") == 0)
-            {
-                localStorage.setItem("check","1")
-                localStorage.setItem("check1",1)
-            
-            }
-        }
-            
-            if(localStorage.getItem("check") === "0"){
-                localStorage.setItem("check","1")
-                history.push('/');
-            }
-            else{
-                history.push()
-            }
+        history.push();
     }
     const {users} = props
     const disabled = state.value===''?true:false
