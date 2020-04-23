@@ -26,21 +26,22 @@ class MyQuestion extends React.Component{
                 <form className = "container " onSubmit={this.onHandleSubmit}>
                     <p>
                         <label>
-                        <input 
-                            name="group1" 
-                            type="radio" 
-                            value='optionOne'
-                            checked={value==='optionOne'}
-                            onChange={this.onHandleChange}
-                        />
-                        <span>{question.optionOne.text}</span>
+                            <input 
+                                name="group1" 
+                                type="checkbox" 
+                                value='optionOne'
+                                checked={value==='optionOne'}
+                                onChange={this.onHandleChange}
+                            />
+                            <span>{question.optionOne.text}</span>
                         </label>
                     </p>
                     <p>
                         <label>
                         <input 
                             name="group1" 
-                            type="radio" 
+                            type="checkbox" 
+                            value='optionTwo'
                             checked={value==='optionTwo'}
                             onChange={this.onHandleChange}
                         />

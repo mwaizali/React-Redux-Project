@@ -13,25 +13,31 @@ import MyUserCard from './UserCard';
 
 class App extends React.Component {
   
+    
+  
   componentDidMount(){
     this.props.dispatch(handleInitialData())
   }
   render(){
     const {authUser} = this.props
+    if(localStorage.length === 0){
+       localStorage.setItem("check", "0")
+       localStorage.setItem("check1", 0)
+     }
     return (
       <BrowserRouter>
       <div className="App">
-        {authUser==null?
+        {authUser===null?
         <Route render={()=>(<MyLogin/>)}/>:
         <div>
           <MyNav/>
           <Switch>
-          <Route exact path="/" component={MyHome} />
-          <Route path="/questions/bad_id" component={MyBadPage}/>
-          <Route path="/questions/:question_id" component={MyUserCard}/>
-          <Route path="/add" component={MyNewPoll}/>
-          <Route path="/leaderboard" component={MyLeaderboard}/>
-          <Route component={MyBadPage}/>
+            <Route exact path="/" component={MyHome} />
+            <Route path="/questions/bad_id" component={MyBadPage}/>
+            <Route path="/questions/:question_id" component={MyUserCard}/>
+            <Route path="/add" component={MyNewPoll}/>
+            <Route path="/leaderboard" component={MyLeaderboard}/>
+            <Route component={MyBadPage}/>
           </Switch>
         </div>
         }

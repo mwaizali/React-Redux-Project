@@ -15,12 +15,9 @@ function a11yProps(index) {
 
 const MyHome =(props)=>{
     const [value,setValue] = useState("one")
-    
     const onHandleChange=(e,newValue)=>{
         setValue(newValue)
     }
-    
-    
     
     const {questionData} = props
     return(

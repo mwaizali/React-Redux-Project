@@ -26,6 +26,7 @@ const MyNav =(props)=>{
     const onHandleClick=(e)=>{
         e.preventDefault()
         props.dispatch(setAuthUser(null))
+        localStorage.setItem("check","0")
     }
         return(
             <div>
@@ -34,7 +35,6 @@ const MyNav =(props)=>{
                         <Typography variant="h6" className={classes.title}>
                             Would You Rather
                         </Typography>
-                        
                         <Avatar src={props.users[props.authUser].avatarURL[props.users[props.authUser].id]}/>
                         <Typography>
                             {props.users[props.authUser].name}      
