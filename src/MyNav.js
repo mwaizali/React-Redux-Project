@@ -26,7 +26,7 @@ const MyNav =(props)=>{
     const onHandleClick=(e)=>{
         e.preventDefault()
         props.dispatch(setAuthUser(null))
-        localStorage.setItem("check","0")
+        
     }
         return(
             <div>
@@ -41,18 +41,18 @@ const MyNav =(props)=>{
                         </Typography>
                     </Toolbar>
                 </AppBar>
-            <nav className ="blue darken-2">
-                <div class="nav-wrapper ">
-                    <div class="brand-logo right"> 
-                        <Button classname="waves-effect waves-light btn white-text"  onClick={(e)=>onHandleClick(e)}>Logout</Button>
+                <nav className ="blue darken-2">
+                    <div className ="nav-wrapper ">
+                        <div className="brand-logo right"> 
+                            <Button className="waves-effect waves-light btn white-text"  onClick={(e)=>onHandleClick(e)}>Logout</Button>
+                        </div>
+                        <ul className="left hide-on-med-and-down">
+                            <li key={"1"}><Link to="/">Home</Link></li>
+                            <li key={"2"}><Link to="/add">New Poll</Link></li>
+                            <li key={"3"}><Link to="/leaderboard">LeaderBoard</Link></li>
+                        </ul>
                     </div>
-                    <ul class="left hide-on-med-and-down">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/add">New Poll</Link></li>
-                        <li><Link to="/leaderboard">LeaderBoard</Link></li>
-                    </ul>
-                </div>
-            </nav>         
+                </nav>         
             </div>
         )
 }

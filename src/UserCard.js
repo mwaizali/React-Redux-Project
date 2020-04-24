@@ -32,8 +32,8 @@ class UserCard extends React.Component{
         }
         return(
             <div className = "">
-                      <div class="card ">
-                            <div class="card-image">
+                      <div className="card ">
+                            <div className="card-image">
                                     <Avatar alt="image" src={author.avatarURL[author.id]}/>
                                     <h4 className= "center">{author.name}</h4> 
 

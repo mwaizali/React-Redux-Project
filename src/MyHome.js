@@ -30,18 +30,20 @@ const MyHome =(props)=>{
             centered
             >
                 <Tab
+                key='one'
                 value="one" 
                 label='Unanswered'
                 {...a11yProps("one")}
                 />
                 <Tab 
+                key='two'
                 value="two"
                 label='Answered'
                 {...a11yProps("two")}
                 />
             </Tabs>
-            {value==="one"&&questionData.answered.map(question=>(
-                        <Grid container direction="column" justify="center" spacing={3} alignItems="center" xs={12}>
+            {value==="one"&&questionData.answered.map((question,index)=>(
+                        <Grid key={`${index}`} container direction="column" justify="center" spacing={3} alignItems="center" >
                             <Grid item xs={12}>
                                 <UserCard
                                 key={question.id}
@@ -51,8 +53,8 @@ const MyHome =(props)=>{
                             </Grid>
                         </Grid>
                     ))}
-            {value==="two"&&questionData.unanswered.map(question=>(
-                        <Grid container xs={12} direction="column" justify="center" spacing={3} alignItems="center">
+            {value==="two"&&questionData.unanswered.map((question,index)=>(
+                        <Grid key={`${index}`} container direction="column" justify="center" spacing={3} alignItems="center" >
                             <Grid item xs={12}>
                                 <UserCard
                                 key={question.id}

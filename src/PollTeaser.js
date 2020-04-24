@@ -18,13 +18,13 @@ class PollTeaser extends React.Component{
         return(
             <div >
                 
-                <div class="card-content">
+                <div className="card-content">
                     <h5>Would you rather</h5>
                     <p>{question.optionOne.text}</p>
                     <p>or</p>         
                 </div>
-                <div class="card-action center">
-                    <button class="waves-effect waves-light btn indigo darken-1" onClick={this.onHandleClick}>{btnText}</button> 
+                <div className="card-action center">
+                    <button className="waves-effect waves-light btn indigo darken-1" onClick={this.onHandleClick}>{btnText}</button> 
                 </div>
                 
             
